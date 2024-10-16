@@ -1,0 +1,40 @@
+2024-10-16 20:11:46.940 +01:00 [INF] Now listening on: http://localhost:5195
+2024-10-16 20:11:47.065 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-16 20:11:47.071 +01:00 [INF] Hosting environment: Development
+2024-10-16 20:11:47.076 +01:00 [INF] Content root path: C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api
+2024-10-16 20:12:25.675 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-10-16 20:12:25.966 +01:00 [INF] HTTP POST /api/Token/login responded 400 in 294.9091 ms
+2024-10-16 20:12:32.964 +01:00 [INF] Call Token Generator using: Authentication.Api.Models.TokenUser
+2024-10-16 20:12:32.992 +01:00 [INF] Getting all the token users from appsettings file.
+2024-10-16 20:12:33.262 +01:00 [INF] All users gotten from appsetings: [{"Username":"NoteTakingTokenUser","Password":"Password#123"},{"Username":"DummyUser","Password":"Dummy123"}]
+2024-10-16 20:12:33.276 +01:00 [INF] No User found in list for specified username.
+2024-10-16 20:12:33.303 +01:00 [INF] No User found with provided usrname. (Parameter 'Username')
+System.ArgumentNullException: No User found with provided usrname. (Parameter 'Username')
+   at Authentication.Api.Models.TokenProvider.GenerateToken(TokenUser user) in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Models\TokenProvider.cs:line 21
+   at Authentication.Api.Controllers.TokenController.<>c__DisplayClass3_0.<GenerateToken>b__0() in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Controllers\TokenController.cs:line 26
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Authentication.Api.Controllers.TokenController.GenerateToken(TokenUser user) in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Controllers\TokenController.cs:line 26
+2024-10-16 20:12:33.385 +01:00 [INF] HTTP POST /api/Token/login responded 200 in 466.8632 ms
+2024-10-16 20:13:16.901 +01:00 [INF] Call Token Generator using: Authentication.Api.Models.TokenUser
+2024-10-16 20:13:16.905 +01:00 [INF] Getting all the token users from appsettings file.
+2024-10-16 20:13:16.913 +01:00 [INF] All users gotten from appsetings: [{"Username":"NoteTakingTokenUser","Password":"Password#123"},{"Username":"DummyUser","Password":"Dummy123"}]
+2024-10-16 20:13:16.929 +01:00 [INF] Getting user secret key from the configuration.
+2024-10-16 20:13:16.937 +01:00 [INF] User secret fetched successfully.
+2024-10-16 20:13:16.945 +01:00 [INF] Encoding the user secret as Key
+2024-10-16 20:13:16.969 +01:00 [INF] Security key created successfully using the key
+2024-10-16 20:13:16.979 +01:00 [INF] Cretating credentials for the token generator
+2024-10-16 20:13:17.048 +01:00 [INF] Credentials created successfully:{"Algorithm":"HS256","Digest":null,"CryptoProviderFactory":null,"Key":{"KeySize":280,"Key":"VGhpcy1pcy10aGUtdXNlci1zZWNyZXQtZm9yLW91ci1hcHA=","KeyId":null,"CryptoProviderFactory":{"CryptoProviderCache":{},"CustomCryptoProvider":null,"CacheSignatureProviders":true,"SignatureProviderObjectPoolCacheSize":32},"Kid":null}
+2024-10-16 20:13:17.059 +01:00 [INF] Generating a user token descriptor
+2024-10-16 20:13:17.067 +01:00 [INF] Token descriptor created successfully:Microsoft.IdentityModel.Tokens.SecurityTokenDescriptor
+2024-10-16 20:13:17.076 +01:00 [INF] Handler creation
+2024-10-16 20:13:17.087 +01:00 [INF] Generate token using the handler.
+2024-10-16 20:13:17.168 +01:00 [INF] Token Generated Successfully,."ZXlKaGJHY2lPaUpJVXpJMU5pSXNJblI1Y0NJNklrcFhWQ0o5LmV5SlZjMlZ5Ym1GdFpTSTZJa1IxYlcxNVZYTmxjaUlzSWxCaGMzTjNiM0prSWpvaVJIVnRiWGt4TWpNaUxDSmhkV1FpT2lKRWRXMXRlVlZ6WlhJaUxDSnBjM01pT2lKVWIydGxia2RsYm1WeVlYUnZjaUlzSW1WNGNDSTZNVGN5T1RFd056YzVOeXdpYVdGMElqb3hOekk1TVRBMU9UazNMQ0p1WW1ZaU9qRTNNamt4TURVNU9UZDkuV2d3cTZ6a2EwazlzUEdveE1waWk0bUtJMmVYR0FQZGNRbG5Sc3puRHhZYw=="
+2024-10-16 20:13:17.191 +01:00 [INF] Exxpuires at: 16/10/2024 19:43:17
+2024-10-16 20:13:17.197 +01:00 [INF] Token generation successful.
+2024-10-16 20:13:17.206 +01:00 [INF] HTTP POST /api/Token/login responded 200 in 311.6775 ms
+2024-10-16 20:14:54.069 +01:00 [INF] Application is shutting down...

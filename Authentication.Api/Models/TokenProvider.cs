@@ -50,15 +50,13 @@ public class TokenProvider(IConfiguration configuration, ILogger<TokenProvider> 
         logger.LogInformation("Generate token using the handler.");
         var token = TokenHandler.CreateToken(tokenDescriptor);
         logger.LogInformation($"Token Generated Successfully,.{GetDetails(Encoding.UTF8.GetBytes(token))}");
-        logger.LogInformation($"Exxpuires at: {tokenDescriptor.Expires}");
+        logger.LogInformation($"Expires at: {tokenDescriptor.Expires}");
 
         return token;
     }
 
     private string GetDetails(Object obj)
     {
-        
-
         return JsonConvert.SerializeObject(obj, Formatting.None);
     }
 
