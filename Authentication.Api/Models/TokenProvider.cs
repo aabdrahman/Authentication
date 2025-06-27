@@ -15,6 +15,7 @@ public class TokenProvider(IConfiguration configuration, ILogger<TokenProvider> 
         logger.LogInformation($"All users gotten from appsetings: {GetDetails(TokenUsers)}");
 
         var details = JsonConvert.SerializeObject(user);
+
         if(!TokenUsers.Any(u => u.Username == user.Username))
         {
             logger.LogInformation("No User found in list for specified username.");

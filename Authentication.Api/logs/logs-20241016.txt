@@ -38,3 +38,24 @@ System.ArgumentNullException: No User found with provided usrname. (Parameter 'U
 2024-10-16 20:13:17.197 +01:00 [INF] Token generation successful.
 2024-10-16 20:13:17.206 +01:00 [INF] HTTP POST /api/Token/login responded 200 in 311.6775 ms
 2024-10-16 20:14:54.069 +01:00 [INF] Application is shutting down...
+2024-10-16 21:05:09.373 +01:00 [INF] Now listening on: http://localhost:5195
+2024-10-16 21:05:10.150 +01:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-10-16 21:05:10.189 +01:00 [INF] Hosting environment: Development
+2024-10-16 21:05:10.199 +01:00 [INF] Content root path: C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api
+2024-10-16 21:05:18.531 +01:00 [WRN] Failed to determine the https port for redirect.
+2024-10-16 21:05:18.808 +01:00 [INF] Call Token Generator using: Authentication.Api.Models.TokenUser
+2024-10-16 21:05:18.937 +01:00 [INF] Getting all the token users from appsettings file.
+2024-10-16 21:05:19.373 +01:00 [INF] All users gotten from appsetings: [{"Username":"NoteTakingTokenUser","Password":"Password#123"},{"Username":"DummyUser","Password":"Dummy123"}]
+2024-10-16 21:05:19.388 +01:00 [INF] No User found in list for specified username.
+2024-10-16 21:05:19.407 +01:00 [INF] No User found with provided usrname. (Parameter 'Username')
+System.ArgumentNullException: No User found with provided usrname. (Parameter 'Username')
+   at Authentication.Api.Models.TokenProvider.GenerateToken(TokenUser user) in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Models\TokenProvider.cs:line 21
+   at Authentication.Api.Controllers.TokenController.<>c__DisplayClass3_0.<GenerateToken>b__0() in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Controllers\TokenController.cs:line 26
+   at System.Threading.Tasks.Task`1.InnerInvoke()
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+--- End of stack trace from previous location ---
+   at System.Threading.ExecutionContext.RunFromThreadPoolDispatchLoop(Thread threadPoolThread, ExecutionContext executionContext, ContextCallback callback, Object state)
+   at System.Threading.Tasks.Task.ExecuteWithThreadLocal(Task& currentTaskSlot, Thread threadPoolThread)
+--- End of stack trace from previous location ---
+   at Authentication.Api.Controllers.TokenController.GenerateToken(TokenUser user) in C:\Users\abdrahman.akande\source\repos\Authentication\Authentication.Api\Controllers\TokenController.cs:line 26
+2024-10-16 21:05:19.628 +01:00 [INF] HTTP POST /api/Token/login responded 200 in 1092.7807 ms

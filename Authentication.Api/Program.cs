@@ -1,6 +1,7 @@
 using System.Text.Json.Serialization;
 using Authentication.Api.Models;
 using Microsoft.AspNetCore.Authentication;
+using Microsoft.AspNetCore.HttpLogging;
 using Serilog;
 
 Log.Logger = new LoggerConfiguration()
@@ -18,6 +19,16 @@ builder.Host.UseSerilog((context, LoggerConfiguration) =>
 {
    LoggerConfiguration.WriteTo.Console();
    LoggerConfiguration.ReadFrom.Configuration(context.Configuration);
+});
+
+builder.Services.AddHttpLogging(options => {
+    options.LoggingFields = HttpLoggingFields.RequestMethod |
+                            HttpLoggingFields.RequestPath |
+                            HttpLoggingFields.RequestHeaders |
+                            HttpLoggingFields.ResponseStatusCode |
+                            HttpLoggingFields.RequestBody |
+                            HttpLoggingFields.ResponseBody |
+                            HttpLoggingFields.Response;
 });
 
 builder.Services.AddScoped<TokenProvider>();
